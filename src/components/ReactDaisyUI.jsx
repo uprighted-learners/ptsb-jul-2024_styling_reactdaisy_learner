@@ -17,7 +17,6 @@ const ReactDaisyUI = () => {
       </Button>
 
       <div className="flex justify-center gap-2 flex-wrap my-4 max-w-72 mx-auto">
-
         <Button color="primary">Primary</Button>
         <Button color="secondary">Secondary</Button>
         <Button color="warning">Warning</Button>
@@ -26,9 +25,6 @@ const ReactDaisyUI = () => {
         <Button color="success">Success</Button>
         <Button color="accent">Accent</Button>
         <Button color="neutral">Neutral</Button>
-
-        
-
       </div>
     </div>
   );
