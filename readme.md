@@ -1,13 +1,9 @@
 # Setup Tailwind CSS, DaisyUI, and FontAwesome with React
-### Docs 
-Tailwind :
-https://tailwindcss.com/docs/guides/vite
-DaisyUI :
-https://daisyui.com/docs/use/
-ReactDaisyUI :
-https://react.daisyui.com/?path=/docs/welcome--docs
-FontAwesome :
-https://fontawesome.com/icons
+## Docs 
+### Tailwind: https://tailwindcss.com/docs/guides/vite
+### DaisyUI: https://daisyui.com/docs/use/
+### ReactDaisyUI : https://react.daisyui.com/?path=/docs/welcome--docs
+### FontAwesome : https://fontawesome.com/icons
 
 
 ### Installation Steps
