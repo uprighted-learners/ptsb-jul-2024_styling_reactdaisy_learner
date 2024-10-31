@@ -1,7 +1,6 @@
 import { faHeart, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useCallback, useRef } from "react";
-
+import { useCallback, useRef, useState, useEffect } from "react";
 import {
   Button,
   ChatBubble,
@@ -13,12 +12,59 @@ import {
   Navbar,
 } from "react-daisyui";
 
+const themes = [
+  "light",
+  "dark",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "retro",
+  "cyberpunk",
+  "valentine",
+  "halloween",
+  "garden",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "dracula",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
+  "lemonade",
+  "night",
+  "coffee",
+  "winter",
+  "dim",
+  "nord",
+  "sunset",
+];
+
 const ReactDaisyUI = () => {
+  const [randomTheme, setRandomTheme] = useState();
   const modalRef = useRef(null);
 
   const handleShow = useCallback(() => {
     modalRef.current?.showModal();
   }, [modalRef]);
+
+  const handleTheme = () => {
+    const random = themes[Math.floor(Math.random() * themes.length)];
+    setRandomTheme(random);
+
+    document.documentElement.setAttribute("data-theme", random);
+  };
+
+  useEffect(() => {
+    handleTheme();
+  }, []);
 
   return (
     <div className="m-4 border-purple-500 border-solid border-4 rounded-2xl p-7 ">
@@ -50,7 +96,7 @@ const ReactDaisyUI = () => {
           </Button>
         </Navbar.Start>
 
-        <h1 className="mx-auto">Current Theme:</h1>
+        <h1 className="mx-auto">Current Theme: {randomTheme}</h1>
 
         <Navbar.End>
           <Button color="ghost">Button</Button>
@@ -85,7 +131,9 @@ const ReactDaisyUI = () => {
               esse praesentium illum ab, ex repellat,
             </p>
 
-            <Button color="secondary">Change Theme</Button>
+            <Button color="secondary" onClick={handleTheme}>
+              Change Theme
+            </Button>
 
             <Checkbox size="sm" color="primary" />
             <Checkbox size="lg" color="secondary" />
@@ -107,7 +155,6 @@ const ReactDaisyUI = () => {
       </Modal>
 
       <div className="bg-slate-800 p-5 rounded-md mt-5">
-
         <ChatBubble>
           <ChatBubble.Message color="primary">
             It&apos;s over Anakin, <br />I have the high ground.
@@ -116,14 +163,12 @@ const ReactDaisyUI = () => {
 
         <ChatBubble end>
           <ChatBubble.Message color="secondary">
-           You underestimate my power!
+            You underestimate my power!
           </ChatBubble.Message>
         </ChatBubble>
-        
-        <ChatBubble >
-          <ChatBubble.Message color="primary">
-           Please anakin
-          </ChatBubble.Message>
+
+        <ChatBubble>
+          <ChatBubble.Message color="primary">Please anakin</ChatBubble.Message>
         </ChatBubble>
       </div>
     </div>
