@@ -119,6 +119,7 @@ const ReactDaisyUI = () => {
            You underestimate my power!
           </ChatBubble.Message>
         </ChatBubble>
+        
         <ChatBubble >
           <ChatBubble.Message color="primary">
            Please anakin
