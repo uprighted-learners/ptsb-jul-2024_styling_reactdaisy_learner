@@ -63,7 +63,7 @@ To verify the setup, apply the following JSX in your React component:
 
 ## Step 7: Add DaisyUI to `tailwind.config.js`
 
-    module.exports = {
+    export default {
       //...
       plugins: [
         require('daisyui'),
@@ -78,7 +78,7 @@ To verify the setup, apply the following JSX in your React component:
 
 To prevent Tailwind CSS from purging DaisyUI styles, modify the `content` section in `tailwind.config.js`:
 
-    module.exports = {
+    export default {
       content: [
         'node_modules/daisyui/dist/**/*.js',
         'node_modules/react-daisyui/dist/**/*.js',
