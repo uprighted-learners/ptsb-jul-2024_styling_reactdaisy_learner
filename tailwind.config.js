@@ -3,19 +3,27 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/daisyui/dist/**/*.js',
-    'node_modules/react-daisyui/dist/**/*.js'
+    "node_modules/daisyui/dist/**/*.js",
+    "node_modules/react-daisyui/dist/**/*.js",
   ],
   theme: {
     extend: {},
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
   daisyui: {
-    themes : [
+    themes: [
       "light",
       "dark",
+      // ? To have complete customization
+      //       {
+      //   dark: {
+      //     ...require("daisyui/src/theming/themes")["dark"],
+      //     primary: "pink",
+      //     secondary: "purple",
+      //     neutral: "pink",
+      //     accent: "pink",
+      //   }
+      // },
       "cupcake",
       "bumblebee",
       "emerald",
@@ -46,6 +54,6 @@ export default {
       "dim",
       "nord",
       "sunset",
-    ]
-  }
-}
+    ],
+  },
+};
